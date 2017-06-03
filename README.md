@@ -332,3 +332,14 @@ In the following, we will describe how to set up and configure Hadoop 1.2.1 and 
         ```shell
         $ bin/hadoop dfs -copyToLocal /output/* ~/DMIDoutput 
         ```
+
+### Compile Metrics Tool
+
+```
+javac -cp src/:lib/jgrapht-core-0.9.0.jar:lib/java-json.jar:lib/commons-math3-3.5.jar:lib/la4j-0.5.5.jar src/ocd/metrics/Main.java
+```
+
+Use like
+```
+java -cp src/:lib/jgrapht-core-0.9.0.jar:lib/java-json.jar:lib/commons-math3-3.5.jar:lib/la4j-0.5.5.jar ocd.metrics.Main 1 /Users/simon/Desktop/graph /Users/simon/Desktop/cover ~/Desktop/output
+```
